@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shrawan Singh | Full Stack Developer</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Shrawan.dev</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+    <h1>Hi, I'm <span>Shrawan Singh</span></h1>
+    <h2>Full Stack Developer | PERN Stack</h2>
+    <p>
+      I build scalable web applications using React.js, Node.js,
+      NestJS, and PostgreSQL. Passionate about real-time systems and clean architecture.
+    </p>
+    <div class="hero-buttons">
+      <a href="#projects" class="btn primary">View Projects</a>
+      <a href="#contact" class="btn secondary">Contact Me</a>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      Full Stack Developer with 2+ years of experience building scalable
+      web applications. Skilled in React.js, Node.js, NestJS, PostgreSQL,
+      authentication systems, and REST APIs.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section dark">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="card">
+        <h3>Frontend</h3>
+        <p>React.js, Next.js, TypeScript, Tailwind CSS</p>
+      </div>
+      <div class="card">
+        <h3>Backend</h3>
+        <p>Node.js, NestJS, Express.js, REST APIs</p>
+      </div>
+      <div class="card">
+        <h3>Database & Tools</h3>
+        <p>PostgreSQL, MySQL, Docker, Git</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+
+    <div class="projects-grid">
+      <div class="card">
+        <h3>Jugnu - IoT Vehicle Tracking</h3>
+        <p>
+          Real-time GPS tracking system with JWT authentication
+          and optimized PostgreSQL queries.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>ESG Power Management System</h3>
+        <p>
+          IoT-based energy monitoring platform with real-time dashboards
+          and MQTT integration.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section dark">
+    <h2>Contact Me</h2>
+    <p>Email: shrawansingh9571@gmail.com</p>
+    <p>Phone: +91 8690453925</p>
+    <p>Location: Gurugram, India</p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Shrawan Singh. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
