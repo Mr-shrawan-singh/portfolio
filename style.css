@@ -7,8 +7,20 @@
 }
 
 body {
-  background: #0f172a;
+  background: #f5f6f7;
   color: #f1f5f9;
+}
+
+
+.logo {
+ width: 60px;
+ height: 60px;
+  background: #38bdf8;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 4px gray ;
 }
 
 /* NAVBAR */
@@ -16,18 +28,15 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 8%;
-  background: #111827;
-  position: fixed;
+  padding:4px 20px 4px 20px;
+ background: #c9d2e4;
+   position: fixed;
   width: 100%;
+  z-index:1000;
   top: 0;
 }
 
-.logo {
-  font-weight: 700;
-  font-size: 20px;
-  color: #38bdf8;
-}
+
 
 .nav-links {
   display: flex;
@@ -40,12 +49,14 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #cbd5e1;
+  font-weight: 500;
+  color:black;
+  font-size: medium;
   transition: 0.3s;
 }
 
 .nav-links a:hover {
-  color: #38bdf8;
+scale: calc(larger);
 }
 
 .menu-toggle {
@@ -54,32 +65,65 @@ body {
   cursor: pointer;
 }
 
+
 /* HERO */
 .hero {
-  height: 100vh;
+  min-height: 100vh;
   padding: 120px 8%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2 columns */
+  align-items: center;
+  gap: 40px;
+  background: #f0f3f5;
 }
 
+/* LEFT TEXT */
 .hero h1 {
+    color:black;
+
   font-size: 48px;
   margin-bottom: 10px;
+
 }
 
 .hero span {
-  color: #38bdf8;
+    color:black;
 }
 
 .hero h2 {
-  color: #94a3b8;
+  color:black;
   margin-bottom: 20px;
 }
 
 .hero p {
+    color:black;
   max-width: 600px;
   margin-bottom: 30px;
+
+}
+
+/* RIGHT IMAGE */
+.hero-image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 20px;
+}
+
+/* ✅ MOBILE RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    grid-template-columns: 1fr; /* stack */
+    text-align: center;
+  }
+
+  .hero-image-wrapper {
+    margin-top: 20px;
+  }
 }
 
 /* BUTTONS */
@@ -93,22 +137,86 @@ body {
 }
 
 .primary {
-  background: #38bdf8;
+  border:2px solid black;
+  background: white;
   color: #0f172a;
 }
 
 .primary:hover {
-  background: #0ea5e9;
+  color:green;
+  
 }
 
 .secondary {
-  border: 2px solid #38bdf8;
-  color: #38bdf8;
+  border: 2px solid #1031ee;
+  color: #3c1cf5;
 }
 
 .secondary:hover {
-  background: #38bdf8;
-  color: #0f172a;
+  color: #28a547;
+}
+
+#about{
+  color:black;
+}
+.aboutsecond{
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+}
+
+@media (max-width: 768px) {
+  .aboutsecond {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+}
+
+.tree {
+  list-style: none;
+}
+
+.tree ul {
+  list-style: none;
+  margin-left: 20px;
+  padding-left: 20px;
+  border-left: 2px solid #ccc;
+}
+
+.tree li {
+  margin: 10px 0;
+  position: relative;
+}
+
+.tree li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 20px;
+  height: 1px;
+  background: #ccc;
+}
+
+.tree span {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.tree span:hover {
+  background: #4ee221;
+  color: white;
+}
+
+/* Content box */
+#contentBox {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
 }
 
 /* SECTIONS */
@@ -122,7 +230,7 @@ body {
 }
 
 .dark {
-  background: #1e293b;
+  background: #eaebec;
 }
 
 /* CARDS */
@@ -134,23 +242,25 @@ body {
 }
 
 .card {
-  background: #0f172a;
-  padding: 25px;
+ background:white;
+ color:black;
+   padding: 25px;
   border-radius: 15px;
   transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  background: #1e293b;
+  color:black;
+ background:white;
 }
 
 /* FOOTER */
 footer {
   text-align: center;
   padding: 20px;
-  background: #111827;
-  color: #94a3b8;
+  background: #b7c4df;
+  color:black;
 }
 
 /* MOBILE */
@@ -158,8 +268,9 @@ footer {
   .nav-links {
     display: none;
     flex-direction: column;
-    background: #111827;
+    background: #c9d2e4;
     position: absolute;
+    color: black;
     right: 0;
     top: 60px;
     width: 200px;

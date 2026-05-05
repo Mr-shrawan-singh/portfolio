@@ -15,7 +15,8 @@
   <!-- NAVBAR -->
   <header>
     <nav class="navbar">
-      <div class="logo">Shrawan.dev</div>
+      
+        <img src="image\shrawanportfoliyo.jpeg"  class="logo"  alt="Shrawan.dev">
       <ul class="nav-links" id="navLinks">
         <li><a href="#home">Home</a></li>
         <li><a href="#about">About</a></li>
@@ -28,32 +29,63 @@
   </header>
 
   <!-- HERO -->
-  <section id="home" class="hero">
+  <section id="home"  class="hero">
+<div>
     <h1>Hi, I'm <span>Shrawan Singh</span></h1>
     <h2>Full Stack Developer | PERN Stack</h2>
     <p>
       I build scalable web applications using React.js, Node.js,
       NestJS, and PostgreSQL. Passionate about real-time systems and clean architecture.
     </p>
+    
     <div class="hero-buttons">
       <a href="#projects" class="btn primary">View Projects</a>
       <a href="#contact" class="btn secondary">Contact Me</a>
+    </div></div>
+    <div class="hero-image-wrapper">
+          <img src="image/developerimage.jpg"  alt="Shrawan Singh" class="hero-image" />
     </div>
+    
   </section>
 
   <!-- ABOUT -->
-  <section id="about" class="section">
+ <section id="about" class="section">
+  <div id="aboutfirst">
     <h2>About Me</h2>
     <p>
       Full Stack Developer with 2+ years of experience building scalable
-      web applications. Skilled in React.js, Node.js, NestJS, PostgreSQL,
-      authentication systems, and REST APIs.
+      web applications. Skilled in React.js, Node.js, PostgreSQL, REST APIs.
     </p>
-  </section>
+  </div>
+
+  <div class="aboutsecond">
+    <ul class="tree">
+      <li>
+        <span onclick="showContent('root')">DSA / Algorithms</span>
+        <ul>
+          <li>
+            <span onclick="showContent('web')">Web Development</span>
+            <ul>
+              <li><span onclick="showContent('html')">HTML</span></li>
+              <li><span onclick="showContent('js')">JavaScript</span></li>
+              <li><span onclick="showContent('react')">React</span></li>
+              <li><span onclick="showContent('node')">Node.js</span></li>
+              <li><span onclick="showContent('express')">Express</span></li>
+              <li><span onclick="showContent('db')">PostgreSQL</span></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+
+    <!-- Content display -->
+    <div id="contentBox"></div>
+  </div>
+</section>
 
   <!-- SKILLS -->
   <section id="skills" class="section dark">
-    <h2>Skills</h2>
+    <h2 style="color:black">Skills</h2>
     <div class="skills-grid">
       <div class="card">
         <h3>Frontend</h3>
@@ -72,29 +104,45 @@
 
   <!-- PROJECTS -->
   <section id="projects" class="section">
-    <h2>Projects</h2>
+  <h2>Projects</h2>
 
-    <div class="projects-grid">
-      <div class="card">
-        <h3>Jugnu - IoT Vehicle Tracking</h3>
-        <p>
-          Real-time GPS tracking system with JWT authentication
-          and optimized PostgreSQL queries.
-        </p>
-      </div>
-
-      <div class="card">
-        <h3>ESG Power Management System</h3>
-        <p>
-          IoT-based energy monitoring platform with real-time dashboards
-          and MQTT integration.
-        </p>
-      </div>
+  <div class="projects-grid">
+    <div class="card">
+      <h3>Jugnu - IoT Vehicle Tracking</h3>
+      <p>
+        Real-time GPS tracking system with JWT authentication
+        and optimized PostgreSQL queries.
+      </p>
     </div>
-  </section>
+
+    <div class="card">
+      <h3>ESG Power Management System</h3>
+      <p>
+        IoT-based energy monitoring platform with real-time dashboards
+        and MQTT integration.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>ERP School Management System</h3>
+      <p>
+        Comprehensive school ERP with modules for student management,
+        attendance, exams, fees, and staff administration with role-based access.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>ERP Sweet Shop Management</h3>
+      <p>
+        End-to-end sweet shop ERP including inventory tracking, billing,
+        order management, supplier handling, and daily sales reporting.
+      </p>
+    </div>
+  </div>
+</section>
 
   <!-- CONTACT -->
-  <section id="contact" class="section dark">
+  <section id="contact" class="section dark" style="color:black">
     <h2>Contact Me</h2>
     <p>Email: shrawansingh9571@gmail.com</p>
     <p>Phone: +91 8690453925</p>
@@ -107,5 +155,87 @@
   </footer>
 
   <script src="script.js"></script>
+ <script src="script.js"></script>
+<script id="wgrqti">
+function showContent(type) {
+  const box = document.getElementById("contentBox");
+
+  const data = {
+    root: `
+      I have a strong foundation in Data Structures and Algorithms.
+      I understand core concepts like arrays, linked lists, stacks, and queues.
+      I regularly practice problem-solving to improve logic building.
+      I focus on writing optimized and efficient code.
+      I am comfortable with time and space complexity analysis.
+      This helps me build scalable and high-performance applications.
+    `,
+
+    web: `
+      I specialize in Full Stack Web Development.
+      I can build complete applications from frontend to backend.
+      I work with modern frameworks and REST APIs.
+      I understand client-server architecture deeply.
+      I focus on performance, scalability, and clean design.
+      I also ensure responsive and user-friendly interfaces.
+    `,
+
+    html: `
+      I create well-structured web pages using HTML.
+      I follow semantic HTML practices for better SEO.
+      I ensure accessibility and proper document structure.
+      I use forms, tables, and media elements effectively.
+      I maintain clean and readable markup.
+      This forms the backbone of every web project I build.
+    `,
+
+    js: `
+      I use JavaScript to build dynamic and interactive UI.
+      I handle DOM manipulation and event handling efficiently.
+      I work with modern ES6+ features.
+      I integrate APIs and manage asynchronous operations.
+      I focus on writing clean and modular code.
+      JavaScript helps bring my applications to life.
+    `,
+
+    react: `
+      I build modern frontend applications using React.
+      I use components for reusable UI design.
+      I manage state using hooks like useState and useEffect.
+      I create fast and responsive single-page applications.
+      I follow best practices for performance optimization.
+      React helps me create scalable user interfaces.
+    `,
+
+    node: `
+      I use Node.js for backend development.
+      I build fast and scalable server-side applications.
+      I handle asynchronous operations efficiently.
+      I work with APIs and real-time data.
+      I integrate databases and authentication systems.
+      Node.js allows me to use JavaScript across the stack.
+    `,
+
+    express: `
+      I use Express.js to build RESTful APIs.
+      I handle routing, middleware, and server logic.
+      I create secure and structured backend services.
+      I manage requests and responses efficiently.
+      I integrate authentication and validation.
+      Express simplifies backend development for Node.js.
+    `,
+
+    db: `
+      I work with PostgreSQL for database management.
+      I design efficient database schemas.
+      I write optimized SQL queries.
+      I handle relationships and data integrity.
+      I perform CRUD operations effectively.
+      PostgreSQL ensures reliable and scalable data storage.
+    `
+  };
+
+  box.innerHTML = data[type] || "Select a topic";
+}
+</script>
 </body>
 </html>
