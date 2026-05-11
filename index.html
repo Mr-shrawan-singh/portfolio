@@ -61,17 +61,17 @@
   <div class="aboutsecond">
     <ul class="tree">
       <li>
-        <span onclick="showContent('root')">DSA / Algorithms</span>
+        <span onclick="showContent('root')" id="root">DSA / Algorithms</span>
         <ul>
           <li>
-            <span onclick="showContent('web')">Web Development</span>
+            <span onclick="showContent('web')" id="web">Web Development</span>
             <ul>
-              <li><span onclick="showContent('html')">HTML</span></li>
-              <li><span onclick="showContent('js')">JavaScript</span></li>
-              <li><span onclick="showContent('react')">React</span></li>
-              <li><span onclick="showContent('node')">Node.js</span></li>
-              <li><span onclick="showContent('express')">Express</span></li>
-              <li><span onclick="showContent('db')">PostgreSQL</span></li>
+              <li><span onclick="showContent('html')"  id="html">HTML</span></li>
+              <li><span onclick="showContent('js')" id="js">JavaScript</span></li>
+              <li><span onclick="showContent('react')" id="react">React</span></li>
+              <li><span onclick="showContent('node')" id="node">Node.js</span></li>
+              <li><span onclick="showContent('express')" id="express">Express</span></li>
+              <li><span onclick="showContent('db')" id="db">PostgreSQL</span></li>
             </ul>
           </li>
         </ul>
@@ -157,8 +157,24 @@
   <script src="script.js"></script>
  <script src="script.js"></script>
 <script id="wgrqti">
+    let activeTab = document.getElementById('web');
+
 function showContent(type) {
+   if (activeTab) {
+    activeTab.style.backgroundColor = "";
+    activeTab.style.color = "black";
+  }
+  const clicktab=document.getElementById(type);
+
+  clicktab.style.backgroundColor="white";
+    clicktab.style.color="blue";
+      clicktab.style.boxShadow='20px';
+
+
+  activeTab = clicktab;
+ 
   const box = document.getElementById("contentBox");
+
 
   const data = {
     root: `
@@ -234,8 +250,14 @@ function showContent(type) {
     `
   };
 
+  
   box.innerHTML = data[type] || "Select a topic";
+
 }
+  window.onload = function () {
+  const defaultElement = document.querySelector('[data-topic="web"]');
+  showContent("web", defaultElement);
+};
 </script>
 </body>
 </html>
